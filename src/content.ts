@@ -13,6 +13,9 @@ export const profile = {
   resumeUrl: '', // TODO(Laya): add resume PDF to public/ and set './resume.pdf'
 }
 
+// Sticky note on the home page. Change it whenever "now" changes.
+export const nowNote = 'currently: practising a guesstimate every night at 8:47 PM \u2615'
+
 export const proofs = [
   { number: '400/day', label: 'payments on the LATAM Airlines checkout I built, on 10% of traffic' },
   { number: '~20', label: 'merchants pitched with the Open Finance Playground I pitched and built' },
@@ -40,7 +43,8 @@ export type Project = {
   oneLine: string
   tags: string[]
   links: { label: string; url: string }[]
-  sections: { heading: string; body: string[] }[]
+  scribble: string // handwritten margin note on the card
+  sections: { heading: string; body: string[]; margin?: string }[]
 }
 
 export const projects: Project[] = [
@@ -49,10 +53,12 @@ export const projects: Project[] = [
     title: 'Open Finance Playground',
     oneLine: 'An interactive walkthrough of what happens behind a Pix payment, now used to pitch about 20 merchants.',
     tags: ['Payments', 'Sales enablement', 'Initiative'],
+    scribble: '~20 merchants',
     links: [{ label: 'See it live', url: 'https://juspay.io/open-finance' }],
     sections: [
       {
         heading: 'The problem',
+        margin: 'nobody assigned this',
         body: [
           'In Brazil, Pix payments through Open Finance involve many API calls between the merchant, Juspay and the bank. Merchants only understood the flow from what we explained on calls, and most had no idea what was happening underneath.',
         ],
@@ -70,6 +76,7 @@ export const projects: Project[] = [
       },
       {
         heading: 'What I would do differently',
+        margin: 'lesson!',
         body: ['Set up protected sandbox and production branches from day one instead of shipping straight to production.'],
       },
     ],
@@ -79,6 +86,7 @@ export const projects: Project[] = [
     title: 'LATAM Airlines checkout',
     oneLine: 'The frontend checkout for one of South America’s largest airlines, built under moving requirements.',
     tags: ['Payments', 'Ownership', 'Shipping under pressure'],
+    scribble: '400 / day',
     links: [],
     sections: [
       {
@@ -102,6 +110,7 @@ export const projects: Project[] = [
       },
       {
         heading: 'What I learned',
+        margin: 'lesson!',
         body: ['You can’t stop requirements from changing, but you can build so that change is cheap.'],
       },
     ],
@@ -111,6 +120,7 @@ export const projects: Project[] = [
     title: 'PM Playground',
     oneLine: 'A tool I built for my own problem: structuring PM interview answers live, with visuals.',
     tags: ['Side project', 'React', 'Built for my own need'],
+    scribble: 'built for me',
     links: [
       { label: 'Try it', url: 'https://layahilarius.github.io/pm-playground/' },
       { label: 'Code', url: 'https://github.com/LayaHilarius/pm-playground' },
