@@ -85,6 +85,11 @@ function Home() {
           This is my notebook: things I built, how I think through product questions, and the messy working that
           got me there. {profile.role}, moving into product.
         </p>
+        <figure className="me">
+          <span className="tape" aria-hidden />
+          <img src="./laya.jpg" alt="Laya, smiling on a city street while travelling" width="280" height="350" />
+          <figcaption className="hand">me, mid-trip ✈</figcaption>
+        </figure>
         <div className="sticky hand">{nowNote}</div>
         <p className="friends hand">
           friends say → {friendsSay.map((w, i) => <span key={w} className={`word w${i}`}>{w}</span>)}

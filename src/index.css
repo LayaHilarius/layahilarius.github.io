@@ -77,12 +77,19 @@ mark { background: linear-gradient(transparent 55%, var(--highlight) 55%); color
   color: var(--red); font-size: 21px; line-height: 1.05;
 }
 .hero { padding-top: 32px; }
+.me {
+  position: absolute; right: 0; top: 10px; width: 280px; margin: 0;
+  background: var(--card); padding: 12px 12px 6px; box-shadow: 0 8px 20px #0003; rotate: 3deg;
+}
+.me img { display: block; width: 100%; height: auto; }
+.me figcaption { text-align: center; font-size: 24px; padding-top: 4px; }
 .sticky {
-  position: absolute; right: 0; top: 36px; width: 210px; padding: 18px;
+  position: absolute; right: 30px; top: 470px; width: 220px; padding: 16px; z-index: 1; rotate: -2deg !important;
   background: var(--sticky); rotate: 3deg; box-shadow: 0 6px 14px #0002;
   font-size: 24px; line-height: 1.2;
 }
-.hero h1, .hero .lede { margin-right: 230px; }
+.hero { min-height: 620px; }
+.hero h1, .hero .lede, .friends { margin-right: 310px; }
 
 .split { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 48px; align-items: start; }
 .arrow { color: var(--green); font-size: 26px; margin: 0 0 10px; }
@@ -167,8 +174,8 @@ mark { background: linear-gradient(transparent 55%, var(--highlight) 55%); color
 .word::after { content: ''; position: absolute; left: 4px; right: 4px; bottom: 2px; height: 3px; background: var(--blue); border-radius: 3px; rotate: -1.5deg; }
 .w1 { display: inline-block; rotate: -2deg; } .w2 { display: inline-block; rotate: 2deg; }
 .doodle { position: absolute; color: var(--blue); font-size: 30px; pointer-events: none; }
-.star { right: 250px; top: 18px; rotate: 12deg; }
-.star.small { font-size: 18px; right: 236px; top: 52px; }
+.star { right: 300px; top: 4px; rotate: 12deg; }
+.star.small { font-size: 18px; right: 290px; top: 40px; }
 
 .off { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 32px; margin-top: 20px; align-items: start; }
 .setlist { background: var(--card); padding: 18px 20px; box-shadow: 0 3px 10px #0002; rotate: -1deg; border-top: 6px solid var(--ink); }
@@ -190,8 +197,10 @@ mark { background: linear-gradient(transparent 55%, var(--highlight) 55%); color
   .tabs { flex-wrap: wrap; gap: 4px 16px; }
   .tabs nav { gap: 14px; font-size: 21px; }
   .margin-note { position: static; display: block; text-align: left; width: auto; }
+  .hero { min-height: 0; }
+  .me { position: static; width: min(260px, 80%); margin: 24px auto 0; }
   .sticky { position: static; margin-top: 16px; width: auto; max-width: 280px; }
-  .hero h1, .hero .lede { margin-right: 0; }
+  .hero h1, .hero .lede, .friends { margin-right: 0; }
   .split { grid-template-columns: 1fr; gap: 36px; }
   h2 { font-size: 34px; }
 }
