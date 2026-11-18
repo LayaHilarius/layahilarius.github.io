@@ -1,16 +1,16 @@
 :root {
-  --paper: #f4efe4;
-  --rule: #e6dfcf;
-  --ink: #2b2722;
-  --soft: #6b6257;
-  --margin: #e5a3a3;
-  --red: #c0504d;
-  --green: #1f6f5c;
-  --blue: #3a5d8f;
-  --highlight: #ffe27a;
-  --sticky: #fff6a8;
-  --card: #fffdf8;
-  --receipt: #fbfaf6;
+  --paper: #fdfdfb;
+  --rule: #dde7f5;
+  --ink: #111318;
+  --soft: #5b6270;
+  --margin: #8fb3ea;
+  --red: #1f4fbf;      /* margin notes: fountain-pen blue */
+  --green: #1f4fbf;    /* handwritten numbers */
+  --blue: #1f4fbf;
+  --highlight: #bcd8ff;
+  --sticky: #d6e6ff;
+  --card: #ffffff;
+  --receipt: #ffffff;
   --line: 32px;
   font-family: Literata, Georgia, serif;
   color: var(--ink);
@@ -18,18 +18,18 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #1e1c19;
-    --rule: #2a2723;
-    --ink: #ece6da;
-    --soft: #a89f92;
-    --margin: #7a4646;
-    --red: #e88b88;
-    --green: #7cc7b0;
-    --blue: #9db9e6;
-    --highlight: #6b5a1c;
-    --sticky: #4a4425;
-    --card: #26231f;
-    --receipt: #2b2824;
+    --paper: #0f1115;
+    --rule: #1b2130;
+    --ink: #f2f4f8;
+    --soft: #9aa3b5;
+    --margin: #2c4a80;
+    --red: #8fb6ff;
+    --green: #8fb6ff;
+    --blue: #8fb6ff;
+    --highlight: #23407a;
+    --sticky: #1d3463;
+    --card: #171a21;
+    --receipt: #1b1f27;
   }
 }
 * { box-sizing: border-box; }
@@ -45,7 +45,7 @@ a { color: var(--blue); }
 .page { position: relative; min-height: 100vh; }
 /* the red margin line */
 .page::before {
-  content: ''; position: absolute; top: 0; bottom: 0; left: max(56px, calc((100vw - 1000px) / 2 + 40px));
+  content: ''; box-shadow: 4px 0 0 var(--margin); position: absolute; top: 0; bottom: 0; left: max(56px, calc((100vw - 1000px) / 2 + 40px));
   border-left: 2px solid var(--margin); pointer-events: none;
 }
 main, .tabs, .footer {
@@ -161,7 +161,30 @@ mark { background: linear-gradient(transparent 55%, var(--highlight) 55%); color
 .footer .hand { font-size: 24px; color: var(--soft); }
 .contacts { display: flex; gap: 16px; }
 
+/* energy: doodles and the friends-say line */
+.friends { font-size: 24px; color: var(--soft); margin: 8px 0 0; }
+.word { color: var(--ink); padding: 0 6px; position: relative; }
+.word::after { content: ''; position: absolute; left: 4px; right: 4px; bottom: 2px; height: 3px; background: var(--blue); border-radius: 3px; rotate: -1.5deg; }
+.w1 { display: inline-block; rotate: -2deg; } .w2 { display: inline-block; rotate: 2deg; }
+.doodle { position: absolute; color: var(--blue); font-size: 30px; pointer-events: none; }
+.star { right: 250px; top: 18px; rotate: 12deg; }
+.star.small { font-size: 18px; right: 236px; top: 52px; }
+
+.off { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 32px; margin-top: 20px; align-items: start; }
+.setlist { background: var(--card); padding: 18px 20px; box-shadow: 0 3px 10px #0002; rotate: -1deg; border-top: 6px solid var(--ink); }
+.setlist ol { list-style: none; padding: 0; margin: 10px 0 0; font-size: 24px; }
+.setlist li { border-bottom: 1px dashed var(--rule); padding: 2px 0; }
+.boarding { display: flex; background: var(--card); box-shadow: 0 3px 10px #0002; rotate: 1deg; border-radius: 10px; overflow: hidden; }
+.pass-main { flex: 1; padding: 18px 20px; border-right: 2px dashed var(--soft); }
+.pass-stub { width: 130px; padding: 18px 14px; background: var(--ink); color: var(--paper); }
+.pass-stub .label { color: var(--paper); opacity: .7; }
+.dest { font-size: 28px; line-height: 1.1; margin: 0; }
+.stamps { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.stamp { display: inline-block; border: 2px solid var(--blue); color: var(--blue); border-radius: 8px; padding: 2px 12px; font-size: 22px; }
+
 @media (max-width: 760px) {
+  .doodle { display: none; }
+  .off { grid-template-columns: 1fr; }
   .page::before { left: 22px; }
   main, .tabs, .footer { padding-left: 38px; padding-right: 16px; }
   .tabs { flex-wrap: wrap; gap: 4px 16px; }

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import {
   about,
   caseStudies,
+  friendsSay,
+  offClock,
   introVideo,
   nowNote,
   profile,
@@ -41,6 +43,7 @@ export default function App() {
           <a href="#work">built</a>
           <a href="#thinking">thinking</a>
           <a href="#videos">videos</a>
+          <a href="#off-clock">off the clock</a>
           <a href="#about">about</a>
         </nav>
       </header>
@@ -83,6 +86,11 @@ function Home() {
           got me there. {profile.role}, moving into product.
         </p>
         <div className="sticky hand">{nowNote}</div>
+        <p className="friends hand">
+          friends say → {friendsSay.map((w, i) => <span key={w} className={`word w${i}`}>{w}</span>)}
+        </p>
+        <span className="doodle star" aria-hidden>✦</span>
+        <span className="doodle star small" aria-hidden>✦</span>
       </section>
 
       <section className="split">
@@ -130,6 +138,36 @@ function Home() {
         <p className="prose">Unscripted answers to common product questions. One take each.</p>
         <div className="polaroids">
           {videos.map((v) => <VideoCard key={v.title} video={v} />)}
+        </div>
+      </section>
+
+      <section id="off-clock">
+        <span className="margin-note hand">the real me ♪</span>
+        <h2 className="hand">off the clock</h2>
+        <div className="off">
+          <div className="setlist">
+            <p className="label">now playing · on repeat</p>
+            <p className="prose">{offClock.singing.line}</p>
+            <ol className="hand">
+              {(offClock.singing.setlist.length ? offClock.singing.setlist : ['your favourite song here', 'and another one', 'the one you always end up singing'])
+                .map((song) => <li key={song}>♪ {song}</li>)}
+            </ol>
+          </div>
+          <div className="boarding">
+            <div className="pass-main">
+              <p className="label">boarding pass · passenger LAYA H</p>
+              <p className="prose">{offClock.travel.line}</p>
+              <div className="stamps">
+                {(offClock.travel.places.length ? offClock.travel.places : ['place 1', 'place 2', 'place 3']).map((pl, i) => (
+                  <span key={pl} className="stamp hand" style={{ rotate: `${[-8, 5, -3, 7][i % 4]}deg` }}>{pl}</span>
+                ))}
+              </div>
+            </div>
+            <div className="pass-stub">
+              <p className="label">next</p>
+              <p className="hand dest">{offClock.travel.next || 'somewhere new'} ✈</p>
+            </div>
+          </div>
         </div>
       </section>
 

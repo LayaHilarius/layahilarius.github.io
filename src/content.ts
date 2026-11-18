@@ -157,6 +157,21 @@ export const caseStudies: CaseStudy[] = [
   { title: 'Coming soon', product: 'Product teardown', summary: 'Teardown 2 of 2', url: '', status: 'Due 24 Dec' },
 ]
 
+// "Off the clock" section: the human side. Laya loves singing and travelling.
+export const friendsSay = ['vibrant', 'enthusiastic', 'brings energy']
+
+export const offClock = {
+  singing: {
+    line: 'I sing. Loudly, often, and in every language I half-know.',
+    setlist: [] as string[], // TODO(Laya): 3-5 songs you love singing
+  },
+  travel: {
+    line: 'I travel as much as I can. New places are how I recharge.',
+    places: [] as string[], // TODO(Laya): places you have been, e.g. 'Munnar'
+    next: '', // TODO(Laya): next place on your list
+  },
+}
+
 export const about = [
   'I’m a product engineer at Juspay, where I build payment experiences for merchants in Latin America. The part of the job I love most is finding the user’s problem and getting people behind a fix, even more than writing the code.',
   'Before Juspay, I shipped a colour-correction feature for colour-blind users at Zoho and wrote a voice-navigation proposal nobody had asked for. In college I taught about 300 students as a UiPath Student Champion and led hackathon teams to wins.',
