@@ -242,8 +242,8 @@ export const about = {
 
 // Human side. Laya loves singing and travelling.
 export const offClock = [
-  { icon: 'music', text: 'I sing, loudly and often.' },
-  { icon: 'plane', text: 'I travel whenever I can. New places are how I recharge.' },
+  { icon: 'music', text: 'I love singing and dancing, and I\u2019m always up for an extracurricular.' },
+  { icon: 'plane', text: 'Happiest with a bag packed and somewhere new to explore.' },
 ]
 
 export const cta = 'Let’s build payments and products people actually understand.'
