@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import Icon from './Icon.tsx'
 import {
   about,
+  activities,
+  experience,
   caseStudies,
   cta,
   heroFlow,
@@ -47,6 +49,7 @@ export default function App() {
       <header className="nav">
         <a href="#" className="brand">{profile.name.toUpperCase()}</a>
         <nav>
+          <a href="#experience">Experience</a>
           <a href="#work">Work</a>
           <a href="#about">About</a>
           {profile.resumeUrl && <a href={profile.resumeUrl} target="_blank" rel="noreferrer">Resume</a>}
@@ -93,6 +96,46 @@ function Home() {
           </div>
         </div>
         <Flow />
+      </section>
+
+      <section id="experience">
+        <p className="eyebrow">Experience</p>
+        <h2>Where I've worked</h2>
+        <ol className="timeline">
+          {experience.map((r) => (
+            <li key={r.company + r.dates} className={r.current ? 'current' : ''}>
+              <div className="when">{r.dates}</div>
+              <div>
+                <h3>{r.title} <span>· {r.company}, {r.place}</span></h3>
+                <ul>{r.points.map((pt) => <li key={pt}>{pt}</li>)}</ul>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section id="beyond">
+        <p className="eyebrow">Beyond work</p>
+        <h2>Hackathons, teaching and guiding juniors</h2>
+        <div className="activity-grid">
+          {activities.map((a) => (
+            <div key={a.title} className="activity">
+              {a.photos.length > 0 ? (
+                <div className="photos">
+                  {a.photos.map((ph) => <img key={ph} src={`./photos/${ph}`} alt={a.title} loading="lazy" />)}
+                </div>
+              ) : (
+                <div className="photo-slot"><Icon name={a.icon} size={28} /></div>
+              )}
+              <div className="activity-head">
+                <h3>{a.title}</h3>
+                <span>{a.when}</span>
+              </div>
+              <p className="highlight">{a.highlight}</p>
+              <p className="activity-text">{a.text}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section id="work">

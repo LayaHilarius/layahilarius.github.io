@@ -10,7 +10,7 @@ export const profile = {
   workHeadline: 'Payments are confusing. I build products that make them make sense.',
   workSub: 'Two years building checkouts for merchants in Latin America at Juspay. I find the problem nobody assigned, get people behind a fix, and ship it.',
   github: 'https://github.com/LayaHilarius',
-  linkedin: '', // TODO(Laya): add LinkedIn URL
+  linkedin: 'https://www.linkedin.com/in/laya17',
   email: '', // TODO(Laya): add the email you want public, or leave empty
   resumeUrl: '', // TODO(Laya): add resume PDF to public/ and set './resume.pdf'
 }
@@ -24,6 +24,78 @@ export const heroFlow = [
 ] as const
 
 export const heroFlowCaption = 'How I take an idea from problem to product'
+
+export type Role = { title: string; company: string; place: string; dates: string; current?: boolean; points: string[] }
+
+export const experience: Role[] = [
+  {
+    title: 'Product Engineer',
+    company: 'Juspay Technologies',
+    place: 'Bengaluru',
+    dates: 'Dec 2024 \u2013 Present',
+    current: true,
+    points: [
+      'Pitched and built the Open Finance Playground, now Juspay\u2019s Brazil sales demo, used to pitch ~20 merchants.',
+      'Built LATAM Airlines\u2019 checkout as the only frontend engineer: 400 payments a day on 10% of traffic.',
+      'Showed a reported 6% checkout drop-off wasn\u2019t real: the merchant was counting orders, not sessions.',
+      'Added fingerprint and face approval for Pix payments, and shipped Google Pay, Apple Pay and a new gateway.',
+    ],
+  },
+  {
+    title: 'Full-Stack Developer Intern',
+    company: 'SuperOps',
+    place: 'Chennai',
+    dates: 'Aug \u2013 Nov 2024',
+    points: ['Shipped production features across UI and backend for a B2B SaaS product used by IT service providers.'],
+  },
+  {
+    title: 'Frontend Developer Intern',
+    company: 'Zoho',
+    place: 'Chennai',
+    dates: 'Jun \u2013 Jul 2024',
+    points: [
+      'Made Zoho Desk usable for colour-blind users with a real-time colour-correction feature, live in the product today.',
+      'Wrote an unassigned proposal for voice-command navigation, to support blind users.',
+    ],
+  },
+  {
+    title: 'Frontend Developer Intern',
+    company: 'Hebesec Technologies',
+    place: 'Chennai',
+    dates: 'Jan \u2013 May 2024',
+    points: ['Built every user-facing screen of a vulnerability-scanning product.'],
+  },
+]
+
+export type Activity = { icon: string; title: string; when: string; highlight: string; text: string; photos: string[] }
+
+// Leadership and community. photos: file names in public/photos/, e.g. 'hackathon-raccam.jpg'.
+export const activities: Activity[] = [
+  {
+    icon: 'trophy',
+    title: 'Hackathons',
+    when: 'College',
+    highlight: '4 wins · 3 finals',
+    text: 'Won the Rajasthan Police RACCAM Hackathon (\u20b950,000) with a fraud-flagging dashboard, led a 6-person team to win IA Hackathon Hyderabad, and won Viz-a-thon 2023 and Hack-a-bot. Finalist at Smart India Hackathon, Hackfest and PEC-Hacks.',
+    photos: [], // TODO(Laya): hackathon photos
+  },
+  {
+    icon: 'people',
+    title: 'UiPath Student Developer Champion',
+    when: '2024 \u2013 25',
+    highlight: '120 taught · 82 certified',
+    text: 'Taught RPA to 120 juniors, three sessions a week. 82 earned the UiPath RPA Developer Foundation certification and 4 went on to RPA jobs. Organised the college\u2019s automation hackathons.',
+    photos: [], // TODO(Laya): stage talk / session photos
+  },
+  {
+    icon: 'target',
+    title: 'Placement Empowerment Program',
+    when: 'Co-lead',
+    highlight: 'Interview prep for juniors',
+    text: 'Co-led sessions on technical interview questions, mock interviews and group discussions, guiding juniors into their first jobs.',
+    photos: [], // TODO(Laya): PEP photos
+  },
+]
 
 export type Preview = 'api' | 'checkout' | 'roadmap'
 
@@ -148,7 +220,7 @@ export const about = {
   stats: [
     { icon: 'card', value: '2 yrs', label: 'in payments' },
     { icon: 'people', value: '300', label: 'students taught' },
-    { icon: 'trophy', value: '2', label: 'hackathon wins' },
+    { icon: 'trophy', value: '4', label: 'hackathon wins' },
   ],
   bring: [
     'I spot the problem nobody assigned and pitch the fix',
