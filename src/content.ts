@@ -38,15 +38,18 @@ export const experience: Role[] = [
       'Pitched and built the Open Finance Playground, now Juspay\u2019s Brazil sales demo, used to pitch ~20 merchants.',
       'Built LATAM Airlines\u2019 checkout as the only frontend engineer: 400 payments a day on 10% of traffic.',
       'Showed a reported 6% checkout drop-off wasn\u2019t real: the merchant was counting orders, not sessions.',
-      'Added fingerprint and face approval for Pix payments, and shipped Google Pay, Apple Pay and a new gateway.',
+      'Added fingerprint and face approval for Pix payments, and shipped Google Pay and Apple Pay.',
     ],
   },
   {
-    title: 'Product Engineer Intern',
+    title: 'Intern',
     company: 'Juspay Technologies',
     place: 'Bengaluru',
     dates: 'Dec 2024 \u2013 Aug 2025',
-    points: ['Joined the payments team in my final year of college and moved to a full-time role after graduating.'],
+    points: [
+      'Integrated the Payamigo payment gateway, which now handles about 200 payments a month.',
+      'Joined in my final year of college and moved to a full-time role after graduating.',
+    ],
   },
   {
     title: 'Full-Stack Developer Intern',
