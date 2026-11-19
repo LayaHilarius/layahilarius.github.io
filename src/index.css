@@ -150,7 +150,9 @@ h2 { font-size: clamp(26px, 3.2vw, 34px); line-height: 1.2; margin-bottom: 20px;
 .stats { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; font-size: 13px; color: var(--soft); }
 .stats span { display: inline-flex; gap: 8px; align-items: center; }
 .stats b { color: var(--ink); }
-.about-side img { width: 160px; height: 200px; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 20px; }
+.about-photos { display: flex; gap: 10px; margin-bottom: 20px; }
+.about-photos img { width: 150px; height: 190px; object-fit: cover; border-radius: 12px; display: block; }
+.about-photos img + img { object-position: 50% 30%; }
 .about-side h3 { font-family: Inter, sans-serif; font-size: 14px; font-weight: 600; margin-bottom: 10px; }
 .bring { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; font-size: 14px; color: var(--soft); }
 .bring li { display: flex; gap: 10px; }
@@ -190,8 +192,10 @@ h2 { font-size: clamp(26px, 3.2vw, 34px); line-height: 1.2; margin-bottom: 20px;
 .activity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .activity { border: 1px solid var(--line); border-radius: 14px; padding: 16px; background: var(--card); }
 .photo-slot { aspect-ratio: 4 / 3; border-radius: 10px; background: var(--surface); border: 1px dashed var(--line); display: grid; place-items: center; color: var(--faint); margin-bottom: 16px; }
-.photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 6px; margin-bottom: 16px; }
-.photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; }
+.photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-bottom: 16px; }
+.photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block; }
+.photos img:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+.photos img:only-child { aspect-ratio: auto; height: auto; }
 .activity-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); display: grid; place-items: center; margin-bottom: 14px; }
 .activity-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
 .activity-head h3 { font-size: 19px; }

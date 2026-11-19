@@ -87,7 +87,7 @@ export const activities: Activity[] = [
     when: 'College',
     highlight: '4 wins · 3 finals',
     text: 'Won the Rajasthan Police RACCAM Hackathon (\u20b950,000) with a fraud-flagging dashboard, led a 6-person team to win IA Hackathon Hyderabad, and won Viz-a-thon 2023 and Hack-a-bot. Finalist at Smart India Hackathon, Hackfest and PEC-Hacks.',
-    photos: [], // TODO(Laya): hackathon photos
+    photos: ['raccam-stage.jpg', 'ia-hackathon-prize.jpg', 'ia-hackathon-mic.jpg'],
   },
   {
     icon: 'people',
@@ -95,7 +95,7 @@ export const activities: Activity[] = [
     when: '2024 \u2013 25',
     highlight: '120 taught · 82 certified',
     text: 'Taught RPA to 120 juniors, three sessions a week. 82 earned the UiPath RPA Developer Foundation certification and 4 went on to RPA jobs. Organised the college\u2019s automation hackathons.',
-    photos: [], // TODO(Laya): stage talk / session photos
+    photos: ['uipath-champion.jpg'],
   },
   {
     icon: 'target',
@@ -103,7 +103,7 @@ export const activities: Activity[] = [
     when: 'Co-lead',
     highlight: 'Interview prep for juniors',
     text: 'Co-led sessions on technical interview questions, mock interviews and group discussions, guiding juniors into their first jobs.',
-    photos: [], // TODO(Laya): PEP photos
+    photos: ['pep-team.jpg'],
   },
 ]
 
