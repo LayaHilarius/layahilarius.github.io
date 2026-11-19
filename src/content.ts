@@ -5,8 +5,10 @@
 export const profile = {
   name: 'Laya H',
   eyebrow: 'Product engineer · Payments · Moving into product',
-  headline: 'Payments are confusing. I build products that make them make sense.',
-  sub: 'Two years building checkouts for merchants in Latin America at Juspay. I find the problem nobody assigned, get people behind a fix, and ship it.',
+  headline: 'Wherever life takes me, I hope to leave something worth remembering.',
+  sub: 'A little corner of the internet that holds pieces of who I am, what I build, and who I\u2019m becoming.',
+  workHeadline: 'Payments are confusing. I build products that make them make sense.',
+  workSub: 'Two years building checkouts for merchants in Latin America at Juspay. I find the problem nobody assigned, get people behind a fix, and ship it.',
   github: 'https://github.com/LayaHilarius',
   linkedin: '', // TODO(Laya): add LinkedIn URL
   email: '', // TODO(Laya): add the email you want public, or leave empty

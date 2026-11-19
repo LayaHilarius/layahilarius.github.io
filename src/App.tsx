@@ -96,6 +96,8 @@ function Home() {
 
       <section id="work">
         <p className="eyebrow">Selected case studies</p>
+        <h2>{profile.workHeadline}</h2>
+        <p className="body work-sub">{profile.workSub}</p>
         <div className="work-grid">
           {projects.map((p) => (
             <a key={p.slug} className="work-card" href={`#/work/${p.slug}`}>

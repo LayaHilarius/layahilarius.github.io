@@ -189,3 +189,5 @@ h2 { font-size: clamp(26px, 3.2vw, 34px); line-height: 1.2; margin-bottom: 20px;
   main, .nav, .footer { padding-left: 16px; padding-right: 16px; }
   .node { width: 88%; }
 }
+
+.work-sub { margin: -8px 0 28px; }
