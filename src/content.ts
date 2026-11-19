@@ -12,7 +12,7 @@ export const profile = {
   github: 'https://github.com/LayaHilarius',
   linkedin: 'https://www.linkedin.com/in/laya17',
   email: '', // TODO(Laya): add the email you want public, or leave empty
-  resumeUrl: '', // TODO(Laya): add resume PDF to public/ and set './resume.pdf'
+  resumeUrl: './Laya_H_Resume.pdf',
 }
 
 // Hero diagram: how any idea goes from problem to product.
