@@ -47,7 +47,7 @@ export const experience: Role[] = [
     place: 'Bengaluru',
     dates: 'Dec 2024 \u2013 Aug 2025',
     points: [
-      'Integrated the Payamigo payment gateway, which now handles about 200 payments a month.',
+      'Integrated the Payamigo payment gateway, which now handles 90+ payments a month.',
       'Joined in my final year of college and moved to a full-time role after graduating.',
     ],
   },
