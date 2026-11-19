@@ -5,6 +5,7 @@ import {
   caseStudies,
   cta,
   heroFlow,
+  heroFlowCaption,
   howIWork,
   offClock,
   profile,
@@ -176,7 +177,7 @@ function Home() {
 
 function Flow() {
   return (
-    <div className="flow" aria-label="How the Open Finance Playground came about">
+    <div className="flow" aria-label={heroFlowCaption}>
       {heroFlow.map((n, i) => (
         <div key={n.label} className={`node n${i}`}>
           <span className="node-icon"><Icon name={n.icon} size={18} /></span>
@@ -186,7 +187,7 @@ function Flow() {
           </div>
         </div>
       ))}
-      <p className="flow-cap">A real one: how the Open Finance Playground happened</p>
+      <p className="flow-cap">{heroFlowCaption}</p>
     </div>
   )
 }

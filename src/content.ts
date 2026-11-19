@@ -15,13 +15,15 @@ export const profile = {
   resumeUrl: '', // TODO(Laya): add resume PDF to public/ and set './resume.pdf'
 }
 
-// Hero diagram: the Open Finance Playground story as a flow.
+// Hero diagram: how any idea goes from problem to product.
 export const heroFlow = [
-  { icon: 'question', label: 'Problem', note: 'Merchants can’t see behind a Pix payment' },
-  { icon: 'build', label: 'Playground', note: 'Every API call, step by step' },
-  { icon: 'stage', label: 'Launch', note: 'BD demo to 200+ in Brazil' },
-  { icon: 'check', label: 'Outcome', note: '~20 merchants pitched' },
+  { icon: 'question', label: 'Notice', note: 'A problem nobody has assigned yet' },
+  { icon: 'people', label: 'Understand', note: 'Talk to the people who feel it' },
+  { icon: 'build', label: 'Build', note: 'Small, tested pieces, shipped fast' },
+  { icon: 'check', label: 'Outcome', note: 'Something people keep using' },
 ] as const
+
+export const heroFlowCaption = 'How I take an idea from problem to product'
 
 export type Preview = 'api' | 'checkout' | 'roadmap'
 
