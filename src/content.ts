@@ -188,7 +188,7 @@ export const projects: Project[] = [
       'Segments turn into charts as I write, and a drawing canvas for quick sketches.',
       'React and TypeScript, hosted free on GitHub Pages, so anyone can open it during a mock.',
     ],
-    outcome: ['TODO(Laya): one line on how it changed your practice, after a few more mocks.'],
+    outcome: [], // TODO(Laya): one line on how it changed your practice; the Outcome block appears once filled
     learned: 'Building for my own problem made me the toughest user I’ve had.',
   },
 ]

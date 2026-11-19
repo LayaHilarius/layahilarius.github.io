@@ -77,6 +77,8 @@ export default function App() {
 }
 
 function Home() {
+  const publishedStudies = caseStudies.filter((c) => c.url)
+  const publishedVideos = videos.filter((v) => v.youtubeId)
   return (
     <>
       <section className="hero">
@@ -125,7 +127,7 @@ function Home() {
                   {a.photos.map((ph) => <img key={ph} src={`./photos/${ph}`} alt={a.title} loading="lazy" />)}
                 </div>
               ) : (
-                <div className="photo-slot"><Icon name={a.icon} size={28} /></div>
+                <span className="activity-icon"><Icon name={a.icon} size={22} /></span>
               )}
               <div className="activity-head">
                 <h3>{a.title}</h3>
@@ -153,7 +155,7 @@ function Home() {
               <p className="metric">{p.metric}</p>
               <p className="metric-label">{p.metricLabel}</p>
               <MiniPreview kind={p.preview} />
-              <p className="pdo">Problem · Decisions · Outcome</p>
+              <p className="pdo">{['Problem', 'Decisions', ...(p.outcome.length ? ['Outcome'] : [])].join(' · ')}</p>
               <span className="read">Read case study <Icon name="arrow" size={15} /></span>
             </a>
           ))}
@@ -174,11 +176,13 @@ function Home() {
         </ol>
       </section>
 
+      {/* Hidden until at least one case study has a link */}
+      {publishedStudies.length > 0 && (
       <section id="thinking">
         <p className="eyebrow">Product thinking</p>
         <h2>Case studies on products I use every day</h2>
         <div className="mini-grid">
-          {caseStudies.map((c, i) => (
+          {publishedStudies.map((c, i) => (
             <div key={i} className={`mini-card ${c.url ? '' : 'pending'}`}>
               <strong>{c.url ? <a href={c.url}>{c.title}</a> : c.title}</strong>
               <span>{c.product}</span>
@@ -187,12 +191,16 @@ function Home() {
           ))}
         </div>
       </section>
+      )}
 
+      {/* Hidden until at least one video has a YouTube id */}
+      {publishedVideos.length > 0 && (
       <section id="videos">
         <p className="eyebrow">Watch me think</p>
         <h2>Unscripted answers to product questions</h2>
-        <div className="video-grid">{videos.map((v) => <VideoCard key={v.title} video={v} />)}</div>
+        <div className="video-grid">{publishedVideos.map((v) => <VideoCard key={v.title} video={v} />)}</div>
       </section>
+      )}
 
       <section id="about" className="about">
         <div>
@@ -287,7 +295,7 @@ function ProjectPage({ project }: { project: Project }) {
     { label: 'Problem', items: project.problem },
     { label: 'Decisions', items: project.decisions },
     { label: 'Outcome', items: project.outcome },
-  ]
+  ].filter((b) => b.items.length > 0)
   return (
     <article className="project">
       <a href="#work" className="back">← All case studies</a>
