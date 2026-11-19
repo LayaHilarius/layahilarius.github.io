@@ -214,7 +214,10 @@ function Home() {
           </div>
         </div>
         <div className="about-side">
-          <img src="./laya.jpg" alt="Laya, smiling on a city street while travelling" width="280" height="350" />
+          <div className="about-photos">
+            <img src="./photos/laya-portrait.jpg" alt="Laya in a navy blazer" width="160" height="200" />
+            <img src="./laya.jpg" alt="Laya, smiling on a city street while travelling" width="160" height="200" />
+          </div>
           <h3>What I bring</h3>
           <ul className="bring">{about.bring.map((b) => <li key={b}>{b}</li>)}</ul>
           <div className="off">
