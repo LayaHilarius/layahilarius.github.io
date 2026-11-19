@@ -8,7 +8,7 @@ export const profile = {
   headline: 'Wherever life takes me, I hope to leave something worth remembering.',
   sub: 'A little corner of the internet that holds pieces of who I am, what I build, and who I\u2019m becoming.',
   workHeadline: 'Payments are confusing. I build products that make them make sense.',
-  workSub: 'Two years building checkouts for merchants in Latin America at Juspay. I find the problem nobody assigned, get people behind a fix, and ship it.',
+  workSub: 'Building checkouts for merchants in Latin America at Juspay since 2024. I find the problem nobody assigned, get people behind a fix, and ship it.',
   github: 'https://github.com/LayaHilarius',
   linkedin: 'https://www.linkedin.com/in/laya17',
   email: '', // TODO(Laya): add the email you want public, or leave empty
@@ -32,7 +32,7 @@ export const experience: Role[] = [
     title: 'Product Engineer',
     company: 'Juspay Technologies',
     place: 'Bengaluru',
-    dates: 'Dec 2024 \u2013 Present',
+    dates: 'Sep 2025 \u2013 Present',
     current: true,
     points: [
       'Pitched and built the Open Finance Playground, now Juspay\u2019s Brazil sales demo, used to pitch ~20 merchants.',
@@ -40,6 +40,13 @@ export const experience: Role[] = [
       'Showed a reported 6% checkout drop-off wasn\u2019t real: the merchant was counting orders, not sessions.',
       'Added fingerprint and face approval for Pix payments, and shipped Google Pay, Apple Pay and a new gateway.',
     ],
+  },
+  {
+    title: 'Product Engineer Intern',
+    company: 'Juspay Technologies',
+    place: 'Bengaluru',
+    dates: 'Dec 2024 \u2013 Aug 2025',
+    points: ['Joined the payments team in my final year of college and moved to a full-time role after graduating.'],
   },
   {
     title: 'Full-Stack Developer Intern',
@@ -218,7 +225,7 @@ export const about = {
     'Before Juspay, I shipped a colour-correction feature for colour-blind users at Zoho. In college I taught about 300 students as a UiPath Student Champion and led hackathon teams to wins.',
   ],
   stats: [
-    { icon: 'card', value: '2 yrs', label: 'in payments' },
+    { icon: 'card', value: 'Since 2024', label: 'in payments' },
     { icon: 'people', value: '300', label: 'students taught' },
     { icon: 'trophy', value: '4', label: 'hackathon wins' },
   ],
