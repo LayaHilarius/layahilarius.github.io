@@ -7,7 +7,7 @@ export const profile = {
   eyebrow: 'Product engineer · Payments · Moving into product',
   headline: 'Wherever life takes me, I hope to leave something worth remembering.',
   sub: 'A little corner of the internet that holds pieces of who I am, what I build, and who I\u2019m becoming.',
-  workHeadline: 'Payments are confusing. I build products that make them make sense.',
+  workHeadline: 'I build products that make payments make sense.',
   workSub: 'Building checkouts for merchants in Latin America at Juspay since 2024. I find the problem nobody assigned, get people behind a fix, and ship it.',
   github: 'https://github.com/LayaHilarius',
   linkedin: 'https://www.linkedin.com/in/laya17',
