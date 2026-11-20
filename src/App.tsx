@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import Icon from './Icon.tsx'
+import TeardownPage from './TeardownPage.tsx'
+import { teardowns } from './teardown.ts'
 import {
   about,
   activities,
@@ -43,6 +45,8 @@ export default function App() {
   const hash = useRoute()
   const slug = hash.startsWith('#/work/') ? hash.slice('#/work/'.length) : null
   const project = slug ? projects.find((p) => p.slug === slug) : undefined
+  const tdSlug = hash.startsWith('#/teardown/') ? hash.slice('#/teardown/'.length) : null
+  const teardown = tdSlug ? teardowns.find((t) => t.slug === tdSlug) : undefined
 
   return (
     <>
@@ -56,7 +60,7 @@ export default function App() {
           <a href="#contact">Contact</a>
         </nav>
       </header>
-      <main>{project ? <ProjectPage project={project} /> : <Home />}</main>
+      <main>{teardown ? <TeardownPage t={teardown} /> : project ? <ProjectPage project={project} /> : <Home />}</main>
       <footer className="footer" id="contact">
         <div className="cta">
           <span className="cta-icon"><Icon name="check" size={26} /></span>
@@ -180,12 +184,14 @@ function Home() {
       {publishedStudies.length > 0 && (
       <section id="thinking">
         <p className="eyebrow">Product thinking</p>
-        <h2>Case studies on products I use every day</h2>
+        <h2>Teardowns of products I use every day</h2>
         <div className="mini-grid">
           {publishedStudies.map((c, i) => (
             <div key={i} className={`mini-card ${c.url ? '' : 'pending'}`}>
               <strong>{c.url ? <a href={c.url}>{c.title}</a> : c.title}</strong>
               <span>{c.product}</span>
+              {c.summary && <p>{c.summary}</p>}
+              {c.url && <a className="read" href={c.url}>Read teardown <Icon name="arrow" size={15} /></a>}
               {!c.url && <em>{c.status}</em>}
             </div>
           ))}

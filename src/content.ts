@@ -208,7 +208,7 @@ export const caseStudies: CaseStudy[] = [
   { title: 'Google product case study', product: 'Pick 1 of 3', summary: '', url: '', status: 'Picked by 24 Dec' },
   { title: 'Google product case study', product: 'Pick 2 of 3', summary: '', url: '', status: 'Picked by 24 Dec' },
   { title: 'Google product case study', product: 'Pick 3 of 3', summary: '', url: '', status: 'Picked by 24 Dec' },
-  { title: 'Product teardown', product: '1 of 2', summary: '', url: '', status: 'Due 24 Dec' },
+  { title: 'Google Maps', product: 'Product teardown', summary: 'Strategy, technology, accessibility and the future of navigation, in three chapters.', url: '#/teardown/google-maps', status: '' },
   { title: 'Product teardown', product: '2 of 2', summary: '', url: '', status: 'Due 24 Dec' },
 ]
 
