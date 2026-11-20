@@ -1,0 +1,44 @@
+/* Scoped to the teardown page; uses the portfolio's existing light/dark tokens. */
+.teardown .td-section > div { min-width: 0; }
+.teardown .td-demo, .teardown .td-table-wrap { max-width: 640px; margin: 24px 0 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.teardown .td-demo { padding: clamp(14px, 3vw, 24px); display: grid; gap: 14px; font-size: 14px; }
+.teardown .td-demo h4, .teardown .td-references h4 { margin: 0; font-size: 16px; font-weight: 600; }
+.teardown .td-demo p { margin: 0; }
+.teardown .td-demo label { display: block; color: var(--soft); }
+.teardown .td-demo label strong { float: right; color: var(--ink); font-variant-numeric: tabular-nums; }
+.teardown .td-demo input[type=range] { display: block; width: 100%; margin: 10px 0 0; accent-color: var(--blue); }
+.teardown .td-demo button, .teardown .td-demo select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 9px 12px; }
+.teardown .td-demo select { display: block; width: 100%; margin-top: 6px; }
+.teardown .td-demo button { cursor: pointer; }
+.teardown .td-demo button[aria-pressed=true], .teardown .td-demo .td-chosen { border-color: var(--blue); background: var(--blue-soft); color: var(--blue); }
+.teardown .td-demo button:focus-visible, .teardown .chapter-map button:focus-visible, .teardown .td-table-wrap:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.teardown .td-note { max-width: 640px; color: var(--soft); font-size: 12px; margin: 12px 0 0; }
+.teardown .td-result { font-family: var(--serif); font-size: clamp(20px, 4vw, 30px); color: var(--blue); overflow-wrap: anywhere; }
+.teardown .td-flow { display: grid; gap: 4px; text-align: center; border: 1px solid var(--line); background: var(--blue-soft); padding: 16px; border-radius: 10px; }
+.teardown .td-flow span, .teardown .td-tile span { color: var(--soft); font-size: 12px; }
+.teardown .td-route-grid, .teardown .td-flow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 128px), 1fr)); gap: 8px; }
+.teardown .td-tile { border: 1px solid var(--line); background: var(--card); padding: 12px; border-radius: 8px; display: grid; gap: 4px; }
+.teardown .td-bar-row { display: grid; gap: 6px; font-size: 13px; }
+.teardown .td-track { height: 12px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.teardown .td-track > div { height: 100%; background: var(--blue); border-radius: 4px; }
+.teardown .td-map { width: 100%; height: auto; display: block; border-radius: 8px; }
+.teardown .td-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.teardown .td-phone { width: 100%; max-width: 300px; margin: 0 auto; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 12px; display: grid; gap: 12px; }
+.teardown .td-instruction { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--blue-soft); border-radius: 8px; }
+.teardown .td-instruction div { display: grid; gap: 4px; }
+.teardown .td-instruction span:not(.td-arrow) { font-size: 12px; color: var(--soft); }
+.teardown .td-arrow { font-size: 38px; line-height: 1; color: var(--blue); }
+.teardown .td-demo .td-action { background: var(--navy); color: var(--on-navy); }
+.teardown .td-demo .td-check { display: flex; gap: 8px; align-items: center; }
+.teardown .td-weeks { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 4px; }
+.teardown .td-weeks span { background: var(--line); text-align: center; padding: 5px 0; border-radius: 4px; }
+.teardown .td-weeks .td-week-on { background: var(--navy); color: var(--on-navy); }
+.teardown .td-table-wrap { overflow-x: auto; }
+.teardown .td-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+.teardown .td-table th, .teardown .td-table td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+.teardown .td-table thead th { background: var(--blue-soft); color: var(--ink); }
+.teardown .td-table tbody th { font-weight: 600; }
+.teardown .td-table td { color: var(--soft); }
+.teardown .td-table tbody tr:last-child > * { border-bottom: 0; }
+.teardown .td-references { margin-top: 24px; }
+.teardown .td-references ul { padding-left: 20px; color: var(--blue); font-size: 14px; }
