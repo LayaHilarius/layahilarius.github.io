@@ -1,10 +1,12 @@
 import TeardownDemo from './TeardownDemo.tsx'
+import GoogleMapsStory from './GoogleMapsStory.tsx'
 import './teardown-extras.css'
 import type { Teardown } from './teardown.ts'
 
 const goTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
 export default function TeardownPage({ t }: { t: Teardown }) {
+  if (t.slug === 'google-maps') return <GoogleMapsStory />
   return (
     <article className="teardown">
       <a href="#thinking" className="back">← Back to portfolio</a>
