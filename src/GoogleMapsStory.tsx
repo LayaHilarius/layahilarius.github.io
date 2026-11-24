@@ -22,10 +22,10 @@ export default function GoogleMapsStory() {
       <div className="gm-meta"><span>Independent exploration</span><span>Product thinking · Accessibility · AR</span></div>
       
       <nav className="gm-anchors" aria-label="Explore the case study">
-        <a href="#gm-curiosity">The curiosity</a>
-        <a href="#gm-access">An everyday problem</a>
-        <a href="#gm-ar">A bigger idea</a>
-        <a href="#gm-documents">The actual documents</a>
+        <button type="button" onClick={() => document.getElementById('gm-curiosity')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>The curiosity</button>
+        <button type="button" onClick={() => document.getElementById('gm-access')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>An everyday problem</button>
+        <button type="button" onClick={() => document.getElementById('gm-ar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>A bigger idea</button>
+        <button type="button" onClick={() => document.getElementById('gm-documents')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>The actual documents</button>
       </nav>
 
       <section id="gm-curiosity" className="gm-section">
