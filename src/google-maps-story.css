@@ -35,3 +35,14 @@
 .gm-story .gm-further a { color: var(--blue); }
 @media(max-width:620px) { .gm-story .gm-doc-grid { grid-template-columns: 1fr; } .gm-story .gm-doc { min-height: 0; } .gm-story .gm-section { padding-top: 55px; } }
 @media(prefers-reduced-motion:reduce) { .gm-story .gm-doc { transition: none; } }
+
+/* Competitor notes: editorial, not a feature matrix. */
+.gm-story .gm-competitors { display: grid; gap: 12px; margin: 26px 0; }
+.gm-story .gm-competitor { border: 1px solid var(--line); background: var(--card); border-radius: 12px; padding: clamp(18px, 3vw, 25px); }
+.gm-story .gm-competitor-label { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); font-weight: 650; }
+.gm-story .gm-ownership { color: var(--soft); font-size: 10px; text-transform: none; letter-spacing: normal; font-weight: 400; }
+.gm-story .gm-competitor h3 { font-family: var(--serif); font-size: clamp(20px, 2.8vw, 24px); font-weight: 500; line-height: 1.3; margin: 10px 0 8px; }
+.gm-story .gm-competitor p { font-size: 14px; line-height: 1.7; margin: 8px 0 14px; }
+.gm-story .gm-competitor a { color: var(--blue); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+.gm-story .gm-competitor a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.gm-story .gm-competitor-caveat { font-size: 12px !important; color: var(--faint) !important; }
