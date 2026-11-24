@@ -46,3 +46,15 @@
 .gm-story .gm-competitor a { color: var(--blue); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
 .gm-story .gm-competitor a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
 .gm-story .gm-competitor-caveat { font-size: 12px !important; color: var(--faint) !important; }
+
+/* Compact second tier in the competitor scan. */
+.gm-story .gm-smaller-competitors { margin: 24px 0; }
+.gm-story .gm-smaller-competitors h3 { font-size: 15px; font-weight: 600; margin: 0 0 12px; }
+.gm-story .gm-smaller-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.gm-story .gm-smaller-grid a { color: inherit; display: grid; align-content: start; gap: 6px; border: 1px solid var(--line); border-radius: 10px; padding: 15px; text-decoration: none; }
+.gm-story .gm-smaller-grid a:hover { border-color: var(--blue); }
+.gm-story .gm-smaller-grid a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.gm-story .gm-smaller-grid strong { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
+.gm-story .gm-smaller-grid strong span { color: var(--blue); }
+.gm-story .gm-smaller-grid a > span { color: var(--soft); font-size: 12px; line-height: 1.5; }
+@media (max-width: 620px) { .gm-story .gm-smaller-grid { grid-template-columns: 1fr; } }
