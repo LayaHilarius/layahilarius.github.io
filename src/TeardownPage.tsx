@@ -1,8 +1,12 @@
+import TeardownDemo from './TeardownDemo.tsx'
+import GoogleMapsStory from './GoogleMapsStory.tsx'
+import './teardown-extras.css'
 import type { Teardown } from './teardown.ts'
 
 const goTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
 export default function TeardownPage({ t }: { t: Teardown }) {
+  if (t.slug === 'google-maps') return <GoogleMapsStory />
   return (
     <article className="teardown">
       <a href="#thinking" className="back">← Back to portfolio</a>
@@ -38,6 +42,17 @@ export default function TeardownPage({ t }: { t: Teardown }) {
               <div>
                 <h3>{s.title}</h3>
                 {s.body.map((p, i) => <p key={i} className="body">{p}</p>)}
+                {s.table && (
+                  <div className="td-table-wrap" role="region" aria-label={s.title + ' table'} tabIndex={0}>
+                    <table className="td-table">
+                      <thead><tr>{s.table.headers.map(h => <th key={h} scope="col">{h}</th>)}</tr></thead>
+                      <tbody>{s.table.rows.map((r, i) => <tr key={i}>{r.map((v, j) => j === 0 ? <th key={j} scope="row">{v}</th> : <td key={j}>{v}</td>)}</tr>)}</tbody>
+                    </table>
+                  </div>
+                )}
+                {s.demo && <TeardownDemo kind={s.demo} />}
+                {s.note && <p className="td-note">{s.note}</p>}
+                {s.sources && <div className="td-references"><h4>Further reading</h4><ul>{s.sources.map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a></li>)}</ul></div>}
                 {s.closing && (
                   <div className="dimensions">
                     <p className="dim-lead">{s.closing.lead}</p>

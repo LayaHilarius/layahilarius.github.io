@@ -1,0 +1,60 @@
+/* This page alone uses the portfolio's existing color and type tokens. */
+.gm-story { max-width: 860px; }
+.gm-story .gm-title-tail { color: var(--soft); }
+.gm-story .gm-intro { font-family: var(--serif); color: var(--ink); font-size: clamp(19px,2.8vw,26px); line-height: 1.5; max-width: 760px; margin: 26px 0; }
+.gm-story .gm-meta { display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: 12px; color: var(--faint); padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.gm-story .gm-anchors { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 20px 0; font-size: 13px; }
+.gm-story .gm-anchors button { color: var(--blue); background: none; border: none; padding: 0; font: inherit; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.gm-story .gm-anchors button:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-radius: 2px; }
+.gm-story .gm-section { padding-top: 76px; scroll-margin-top: 20px; max-width: 760px; }
+.gm-story .gm-section p { font-size: 16px; color: var(--soft); line-height: 1.8; max-width: 690px; margin: 14px 0; }
+.gm-story .gm-section h2 { max-width: 680px; margin: 10px 0 22px; }
+.gm-story .gm-count { color: var(--blue); font-size: 11px; text-transform: uppercase; letter-spacing: .13em; font-weight: 650; }
+.gm-story .gm-note { border-left: 2px solid var(--blue); margin-top: 24px; padding: 10px 18px; display: grid; gap: 6px; font-size: 15px; }
+.gm-story .gm-note span { color: var(--soft); }
+.gm-story .gm-idea { margin: 28px 0; border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: clamp(18px, 3vw, 28px); }
+.gm-story .gm-idea-label { color: var(--blue); font-size: 11px; text-transform: uppercase; letter-spacing: .10em; font-weight: 650; }
+.gm-story .gm-idea h3 { font-size: clamp(20px,2.8vw,25px); margin: 12px 0; }
+.gm-story .gm-idea p { margin-bottom: 0; }
+.gm-story .gm-film { margin: 24px 0 0; max-width: 680px; }
+.gm-story .gm-film video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #273f46; }
+.gm-story .gm-film figcaption { margin-top: 9px; font-size: 12px; color: var(--soft); line-height: 1.6; }
+
+.gm-story .gm-doc-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 26px 0; }
+.gm-story .gm-doc { text-decoration: none; color: inherit; padding: 22px; border: 1px solid var(--line); background: var(--card); border-radius: 12px; display: grid; gap: 9px; min-height: 160px; transition: border-color .2s, transform .2s; }
+.gm-story .gm-doc:hover { border-color: var(--blue); transform: translateY(-2px); }
+.gm-story .gm-doc:focus-visible, .gm-story .gm-research-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.gm-story .gm-doc-top { display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--blue); }
+.gm-story .gm-doc-top span:last-child { font-size: 18px; }
+.gm-story .gm-doc strong { font-family: var(--serif); font-size: 21px; font-weight: 500; line-height: 1.3; }
+.gm-story .gm-doc > span:last-child { color: var(--soft); font-size: 13px; line-height: 1.5; }
+.gm-story .gm-disclaimer { font-size: 12px !important; color: var(--faint) !important; }
+.gm-story .gm-last { padding-bottom: 30px; }
+.gm-story .gm-research-toggle { margin: 18px 0; padding: 12px 0; width: 100%; max-width: 690px; border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: left; background: none; color: var(--ink); font: inherit; cursor: pointer; display: flex; justify-content: space-between; }
+.gm-story .gm-further { display: grid; gap: 10px; margin: 12px 0; font-size: 14px; }
+.gm-story .gm-further a { color: var(--blue); }
+@media(max-width:620px) { .gm-story .gm-doc-grid { grid-template-columns: 1fr; } .gm-story .gm-doc { min-height: 0; } .gm-story .gm-section { padding-top: 55px; } }
+@media(prefers-reduced-motion:reduce) { .gm-story .gm-doc { transition: none; } }
+
+/* Competitor notes: editorial, not a feature matrix. */
+.gm-story .gm-competitors { display: grid; gap: 12px; margin: 26px 0; }
+.gm-story .gm-competitor { border: 1px solid var(--line); background: var(--card); border-radius: 12px; padding: clamp(18px, 3vw, 25px); }
+.gm-story .gm-competitor-label { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); font-weight: 650; }
+.gm-story .gm-ownership { color: var(--soft); font-size: 10px; text-transform: none; letter-spacing: normal; font-weight: 400; }
+.gm-story .gm-competitor h3 { font-family: var(--serif); font-size: clamp(20px, 2.8vw, 24px); font-weight: 500; line-height: 1.3; margin: 10px 0 8px; }
+.gm-story .gm-competitor p { font-size: 14px; line-height: 1.7; margin: 8px 0 14px; }
+.gm-story .gm-competitor a { color: var(--blue); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+.gm-story .gm-competitor a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.gm-story .gm-competitor-caveat { font-size: 12px !important; color: var(--faint) !important; }
+
+/* Compact second tier in the competitor scan. */
+.gm-story .gm-smaller-competitors { margin: 24px 0; }
+.gm-story .gm-smaller-competitors h3 { font-size: 15px; font-weight: 600; margin: 0 0 12px; }
+.gm-story .gm-smaller-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.gm-story .gm-smaller-grid a { color: inherit; display: grid; align-content: start; gap: 6px; border: 1px solid var(--line); border-radius: 10px; padding: 15px; text-decoration: none; }
+.gm-story .gm-smaller-grid a:hover { border-color: var(--blue); }
+.gm-story .gm-smaller-grid a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.gm-story .gm-smaller-grid strong { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
+.gm-story .gm-smaller-grid strong span { color: var(--blue); }
+.gm-story .gm-smaller-grid a > span { color: var(--soft); font-size: 12px; line-height: 1.5; }
+@media (max-width: 620px) { .gm-story .gm-smaller-grid { grid-template-columns: 1fr; } }
