@@ -23,6 +23,7 @@ export default function GoogleMapsStory() {
       
       <nav className="gm-anchors" aria-label="Explore the case study">
         <button type="button" onClick={() => document.getElementById('gm-curiosity')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>The curiosity</button>
+        <button type="button" onClick={() => document.getElementById('gm-competitors')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>The alternatives</button>
         <button type="button" onClick={() => document.getElementById('gm-access')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>An everyday problem</button>
         <button type="button" onClick={() => document.getElementById('gm-ar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>A bigger idea</button>
         <button type="button" onClick={() => document.getElementById('gm-documents')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>The actual documents</button>
@@ -37,8 +38,36 @@ export default function GoogleMapsStory() {
         <div className="gm-note"><strong>The question I kept coming back to</strong><span>If the product already does so much, where would I even begin improving it?</span></div>
       </section>
 
+      <section id="gm-competitors" className="gm-section">
+        <span className="gm-count">02 / Looking beyond Google</span>
+        <h2>What would make me open another map?</h2>
+        <p>Before deciding what I would improve, I looked at what other navigation apps emphasize. I wasn't trying to declare a winner. I wanted to understand the different jobs people choose them for.</p>
+        <div className="gm-competitors">
+          <div className="gm-competitor">
+            <span className="gm-competitor-label">Apple Maps</span>
+            <h3>Navigation that fits the Apple experience.</h3>
+            <p>Turn-by-turn directions and offline maps make it a practical alternative for iPhone users. The device experience itself can be part of the reason to choose it.</p>
+            <a href="https://support.apple.com/en-in/105084" target="_blank" rel="noopener noreferrer">Explore Apple Maps ↗</a>
+          </div>
+          <div className="gm-competitor">
+            <span className="gm-competitor-label">Waze <span className="gm-ownership">Google-owned</span></span>
+            <h3>Built around the drive happening right now.</h3>
+            <p>Live reports about traffic, hazards and incidents are central to the experience. It's a reminder that some people open a map to avoid surprises, not to discover places.</p>
+            <a href="https://www.waze.com/about" target="_blank" rel="noopener noreferrer">Explore Waze ↗</a>
+          </div>
+          <div className="gm-competitor">
+            <span className="gm-competitor-label">Mappls · MapmyIndia</span>
+            <h3>Local context matters.</h3>
+            <p>India-focused mapping, local-language guidance and detailed junction views stand out to me. Familiar language and recognizable road details can be just as useful as a fast route.</p>
+            <a href="https://about.mappls.com/app/" target="_blank" rel="noopener noreferrer">Explore Mappls ↗</a>
+          </div>
+        </div>
+        <div className="gm-note"><strong>What this changed in my thinking</strong><span>I wouldn't try to beat every competitor on every feature. I'd focus on the moment a user stops feeling confident: understanding the next turn or figuring out what to do after a mistake.</span></div>
+        <p className="gm-competitor-caveat">This is a brief feature-positioning comparison based on public product information, not a hands-on benchmark or measured user-preference study.</p>
+      </section>
+
       <section id="gm-access" className="gm-section">
-        <span className="gm-count">02 / Improving what we have</span>
+        <span className="gm-count">03 / Improving what we have</span>
         <h2>Getting lost shouldn't mean depending on someone else.</h2>
         <p>I thought about an older person trying to reach a hospital or visit a relative. Starting navigation is one thing. But what happens if they miss a turn, don't recognize the road name, or aren't sure whether to trust the new directions?</p>
         <p>I don't want to assume every older adult struggles with Maps. That's why I started with a user research plan instead of jumping straight into building.</p>
@@ -52,7 +81,7 @@ export default function GoogleMapsStory() {
       </section>
 
       <section id="gm-ar" className="gm-section">
-        <span className="gm-count">03 / Reimagining the experience</span>
+        <span className="gm-count">04 / Reimagining the experience</span>
         <h2>What if the arrow was on the road itself?</h2>
         <p>I've had this thought about motorcycle riders for a while. If Maps knows I need to take the second street, what if my glasses could show a small arrow pointing to that exact road?</p>
         <p>My first thought was Ray-Ban-style smart glasses. Then I wondered about an AR helmet visor. I know the hardware would be expensive and getting the arrow to line up with the real street is much harder than simply displaying directions.</p>
@@ -72,7 +101,7 @@ export default function GoogleMapsStory() {
       </section>
 
       <section id="gm-documents" className="gm-section">
-        <span className="gm-count">04 / Behind the decisions</span>
+        <span className="gm-count">05 / Behind the decisions</span>
         <h2>The work behind these ideas.</h2>
         <p>The page above is the short version. I wrote out the thinking behind it too: what I would research, what I'd build, how I'd prioritize, and how I'd judge whether any of it worked.</p>
         <div className="gm-doc-grid">
@@ -88,7 +117,7 @@ export default function GoogleMapsStory() {
       </section>
 
       <section className="gm-section gm-last">
-        <span className="gm-count">05 / What changed for me</span>
+        <span className="gm-count">06 / What changed for me</span>
         <h2>I ended up thinking less about adding features.</h2>
         <p>The accessibility idea made me ask what we could remove or explain better. The AR idea made me ask whether changing the interface itself could be worthwhile — and what new risks that might introduce.</p>
         <p>Neither idea is validated yet. But that's what I liked about this exercise: I started with curiosity and ended up with better questions.</p>
