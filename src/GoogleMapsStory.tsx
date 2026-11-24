@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import TeardownDemo from './TeardownDemo.tsx'
 import './google-maps-story.css'
 
 const docId = '1kivsVebnEcZMKXIPOO2cRqDDVUBaU1RkwE7g_Ldx-9s'
@@ -48,7 +47,6 @@ export default function GoogleMapsStory() {
           <h3>Make directions simpler. Make mistakes easier to recover from.</h3>
           <p>An optional navigation mode with fewer distractions, clearer next steps and reassuring wrong-turn instructions in a supported language the user understands.</p>
         </div>
-        <TeardownDemo kind="navigation" />
         <p>I also thought about directions based on visible landmarks — like turning after a temple instead of guessing what 100 metres feels like. I left that idea for later because keeping landmark data accurate is a bigger problem.</p>
         <p>For a first version, I picked simplified navigation and wrong-turn recovery. It's not about inventing rerouting; it's about making recovery easier to understand. Whether that actually helps is something I'd need to test.</p>
       </section>
@@ -64,7 +62,13 @@ export default function GoogleMapsStory() {
           <h3>Less looking down. But only if it's genuinely safer.</h3>
           <p>I'd test a simple heads-up direction first, in a simulator. The real-world AR overlay and any helmet partnership would come much later, after usability and safety research.</p>
         </div>
-        <TeardownDemo kind="ar" />
+        <figure className="gm-film">
+          <video autoPlay muted loop playsInline controls preload="metadata" aria-label="Illustrated road view with an AR navigation arrow pointing toward the second right turn">
+            <source src="/ar-ride-assist.mp4" type="video/mp4" />
+            Your browser does not support inline video.
+          </video>
+          <figcaption>A short illustrated concept: the road moves ahead while a heads-up arrow points toward the next turn. Not a functioning AR system or real-world riding footage.</figcaption>
+        </figure>
       </section>
 
       <section id="gm-documents" className="gm-section">
