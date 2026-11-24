@@ -62,6 +62,15 @@ export default function GoogleMapsStory() {
             <a href="https://about.mappls.com/app/" target="_blank" rel="noopener noreferrer">Explore Mappls ↗</a>
           </div>
         </div>
+        <div className="gm-smaller-competitors">
+          <h3>Smaller alternatives I also looked at</h3>
+          <div className="gm-smaller-grid">
+            <a href="https://www.openstreetmap.org/about" target="_blank" rel="noopener noreferrer"><strong>OpenStreetMap <span aria-hidden="true">↗</span></strong><span>Community-built, openly licensed map data. More of a mapping foundation than a direct Google Maps app competitor.</span></a>
+            <a href="https://organicmaps.app/" target="_blank" rel="noopener noreferrer"><strong>Organic Maps <span aria-hidden="true">↗</span></strong><span>Privacy-focused, offline navigation built on OpenStreetMap data.</span></a>
+            <a href="https://osmand.net/" target="_blank" rel="noopener noreferrer"><strong>OsmAnd <span aria-hidden="true">↗</span></strong><span>Detailed offline maps and customizable routing for people who want more control.</span></a>
+            <a href="https://www.here.com/products/wego" target="_blank" rel="noopener noreferrer"><strong>HERE WeGo <span aria-hidden="true">↗</span></strong><span>A navigation alternative that emphasizes downloadable maps and offline journeys.</span></a>
+          </div>
+        </div>
         <div className="gm-note"><strong>What this changed in my thinking</strong><span>I wouldn't try to beat every competitor on every feature. I'd focus on the moment a user stops feeling confident: understanding the next turn or figuring out what to do after a mistake.</span></div>
         <p className="gm-competitor-caveat">This is a brief feature-positioning comparison based on public product information, not a hands-on benchmark or measured user-preference study.</p>
       </section>
