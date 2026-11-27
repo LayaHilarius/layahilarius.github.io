@@ -107,7 +107,7 @@ export const activities: Activity[] = [
   },
 ]
 
-export type Preview = 'api' | 'checkout' | 'roadmap'
+export type Preview = 'api' | 'checkout' | 'roadmap' | 'tracker' | 'fraud'
 
 export type Project = {
   slug: string
@@ -190,6 +190,56 @@ export const projects: Project[] = [
     ],
     outcome: [], // TODO(Laya): one line on how it changed your practice; the Outcome block appears once filled
     learned: 'Building for my own problem made me the toughest user I’ve had.',
+  },
+  {
+    slug: 'revolut-account-review-tracker',
+    number: '04',
+    title: 'Revolut: locked out of my money',
+    tags: ['Case study', 'Python + SQL', 'PRD + prototype'],
+    metric: '53.3%',
+    metricLabel: 'of angry reviews are customers locked out',
+    preview: 'tracker',
+    links: [
+      { label: 'Case study', url: 'https://layahilarius.github.io/revolut-po-case-study/' },
+      { label: 'Try the prototype', url: 'https://layahilarius.github.io/revolut-po-case-study/#/tracker' },
+      { label: 'Code and data', url: 'https://github.com/LayaHilarius/revolut-po-case-study' },
+    ],
+    problem: [
+      'I wanted to know what makes Revolut customers angriest. I pulled the 2,500 newest English Play Store reviews (7 Oct to 23 Nov 2026) with Python in Colab and tagged each one with 9 complaint themes.',
+      'Counting the themes in SQL showed that 53.3% of the 685 one- and two-star reviews come from people who can’t reach their money: frozen accounts, stuck verification, or can’t log in. 27.4% of them also say support didn’t help.',
+    ],
+    decisions: [
+      'The checks are a legal requirement, and often the reason can’t be shared. So I didn’t try to remove reviews; I went after the silence around them.',
+      'Monzo tells customers most reviews finish within 2 days and Wise shows an estimated time. Revolut shows neither, so I wrote a PRD for an in-app Account Review Tracker: the stage, what’s needed with upload, a time range, and what still works.',
+      'I built a clickable React prototype of it, labelled as a concept, not affiliated with Revolut.',
+    ],
+    outcome: [], // concept project: no shipped outcome to claim
+    learned: 'Keyword tagging is quick but rough. Next time I’d hand-label 100 reviews first to measure how accurate it is.',
+  },
+  {
+    slug: 'revolut-fraud-rules',
+    number: '05',
+    title: 'Fraud rules vs. good customers',
+    tags: ['Case study', 'SQL', 'Dashboard'],
+    metric: '0.6% → 99.8%',
+    metricLabel: 'fraud money stopped: existing rule vs. mine',
+    preview: 'fraud',
+    links: [
+      { label: 'See the dashboard', url: 'https://layahilarius.github.io/revolut-po-case-study/#/fraud' },
+      { label: 'SQL', url: 'https://github.com/LayaHilarius/revolut-po-case-study/tree/main/fraud-rules' },
+    ],
+    problem: [
+      'Accounts get frozen because fraud rules flag them. A good rule has to do two jobs at once: stop fraud, and block as few genuine customers as possible.',
+      'I used PaySim, a public dataset of 6.3 million simulated mobile-money transactions over 30 days, where the existing rule (transfers over 200k) stopped only 0.6% of the fraud money.',
+    ],
+    decisions: [
+      'I wrote one SQL query that scores any rule on four numbers: frauds caught, fraud money saved, good customers blocked, and blocked per 10,000 genuine transactions. Then I compared 9 rules.',
+      '“The account ends at zero” looked like a great signal, but 42.7% of genuine transfers end at zero too. “Moves exactly the whole balance” catches the same 97.6% of frauds and blocks no genuine customers.',
+      'Most of what that rule missed were transfers of exactly 10M, the per-transaction cap. Adding them as a step-up check, not a hard block, raised money stopped to 99.8% while flagging 4.6 genuine transactions per 10,000.',
+      'I built a dashboard that tells this in six steps, so someone who doesn’t read SQL gets the point.',
+    ],
+    outcome: [],
+    learned: 'Simulated data is cleaner than real life. In a real bank I’d run the rule in shadow mode first and watch false positives every week.',
   },
 ]
 
