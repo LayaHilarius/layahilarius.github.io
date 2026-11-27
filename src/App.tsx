@@ -274,6 +274,28 @@ function MiniPreview({ kind }: { kind: Preview }) {
         <div className="pay">Pay</div>
       </div>
     )
+  if (kind === 'tracker')
+    return (
+      <div className="preview tracker" aria-hidden>
+        <div className="tr-eta">Usually <b>1 to 2 days</b></div>
+        {['Review started', 'Info needed from you', 'Under review', 'Decision'].map((s, i) => (
+          <div key={s} className={`tr-step ${i === 0 ? 'done' : i === 1 ? 'now' : ''}`}><span />{s}</div>
+        ))}
+      </div>
+    )
+  if (kind === 'fraud')
+    return (
+      <div className="preview fraudp" aria-hidden>
+        {[['Existing rule', 0.6], ['Full balance', 87.7], ['+ 10M step-up', 99.8]].map(([l, v]) => (
+          <div key={l as string} className="fr-row">
+            <span className="fr-l">{l}</span>
+            <span className="fr-track"><span style={{ width: `${v}%` }} /></span>
+            <span className="fr-v">{v}%</span>
+          </div>
+        ))}
+        <p className="fr-cap">share of fraud money stopped</p>
+      </div>
+    )
   return (
     <div className="preview roadmap" aria-hidden>
       <div className="bar">{[0, 1, 2, 3, 4].map((i) => <span key={i} className={i < 3 ? 'done' : ''} />)}</div>
